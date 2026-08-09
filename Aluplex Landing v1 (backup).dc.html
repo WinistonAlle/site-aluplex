@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>ALUPLEX — Fachadas de Vidro e Esquadrias de Alumínio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #0A0A0C; color: #EAF0F2; font-family: 'Poppins', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #6FD8E2; text-decoration: none; }
+    a:hover { color: #9FE8EF; }
+    ::selection { background: rgba(0,164,183,0.35); }
+    @keyframes floatGlow { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-14px); } }
+    @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(0,164,183,0.55); } 70% { box-shadow: 0 0 0 18px rgba(0,164,183,0); } 100% { box-shadow: 0 0 0 0 rgba(0,164,183,0); } }
+  </style>
+</helmet>
+
+<!-- ══════════════ FUNDO: gradientes escuros + glows fixos ══════════════ -->
+<div style="position: fixed; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(1200px 800px at 80% -10%, rgba(0,164,183,0.14), transparent 60%), radial-gradient(1000px 700px at -10% 40%, rgba(49,39,131,0.20), transparent 60%), radial-gradient(900px 600px at 60% 110%, rgba(0,164,183,0.10), transparent 60%), linear-gradient(180deg, #0A0A0C 0%, #101318 50%, #0A0A0C 100%);"></div>
+
+<div style="position: relative; z-index: 1;">
+
+  <!-- ══════════════ 1. HEADER FIXO GLASS ══════════════ -->
+  <header data-screen-label="Header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px clamp(16px, 4vw, 48px); background: rgba(14,16,20,0.55); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.35);">
+    <a href="#hero" style="display: flex; align-items: center; flex-shrink: 0;">
+      <img src="assets/aluplex-logo.png" alt="Aluplex — fachadas e esquadrias" style="height: 40px; display: block; filter: drop-shadow(0 0 12px rgba(0,164,183,0.35)) brightness(1.15);">
+    </a>
+    <nav style="display: flex; align-items: center; gap: clamp(12px, 2.5vw, 28px); font-size: 14px; font-weight: 500;">
+      <a href="#solucoes" style="color: #C7D3D8;" style-hover="color: #6FD8E2;">Soluções</a>
+      <a href="#portfolio" style="color: #C7D3D8;" style-hover="color: #6FD8E2;">Portfólio</a>
+      <a href="#sobre" style="color: #C7D3D8;" style-hover="color: #6FD8E2;">Sobre</a>
+      <a href="#contato" style="color: #C7D3D8;" style-hover="color: #6FD8E2;">Contato</a>
+    </nav>
+    <a href="{{ waLink }}" target="_blank" rel="noopener" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; color: #06282C; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border: 1px solid rgba(255,255,255,0.25); box-shadow: 0 4px 20px rgba(0,164,183,0.45), inset 0 1px 0 rgba(255,255,255,0.4); transition: all 0.25s ease;" style-hover="box-shadow: 0 6px 28px rgba(0,164,183,0.7), inset 0 1px 0 rgba(255,255,255,0.5); transform: translateY(-1px);">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #06282C; flex-shrink: 0;"></span>
+      Solicitar Orçamento
+    </a>
+  </header>
+
+  <!-- ══════════════ 2. HERO ══════════════ -->
+  <section id="hero" data-screen-label="Hero" style="position: relative; min-height: 100svh; display: flex; align-items: center; justify-content: center; padding: 140px clamp(16px, 5vw, 64px) 80px; overflow: hidden;">
+    <!-- imagem de fundo placeholder (parallax) -->
+    <div data-parallax="0.25" style="position: absolute; inset: -12% 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 2px, transparent 2px, transparent 26px), linear-gradient(200deg, rgba(0,164,183,0.10) 0%, rgba(49,39,131,0.16) 45%, rgba(10,10,12,0.9) 100%);"></div>
+    <div style="position: absolute; inset: 0; display: flex; align-items: flex-start; justify-content: flex-end; padding: 120px 5%;">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.28); border: 1px dashed rgba(255,255,255,0.18); border-radius: 8px; padding: 8px 14px;">[ imagem: render de fachada pele de vidro ]</span>
+    </div>
+    <!-- glow flutuante -->
+    <div style="position: absolute; top: 15%; left: 55%; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(0,164,183,0.22), transparent 65%); filter: blur(20px); animation: floatGlow 9s ease-in-out infinite;"></div>
+
+    <!-- painel de vidro em destaque -->
+    <div data-reveal style="position: relative; max-width: 860px; width: 100%; padding: clamp(32px, 6vw, 72px); border-radius: 28px; background: linear-gradient(160deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03) 55%, rgba(0,164,183,0.06)); backdrop-filter: blur(22px) saturate(1.5); -webkit-backdrop-filter: blur(22px) saturate(1.5); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 24px 80px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -1px 0 rgba(0,164,183,0.15); opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease, transform 0.9s ease;">
+      <div style="display: inline-flex; align-items: center; gap: 10px; padding: 7px 16px; border-radius: 999px; background: rgba(0,164,183,0.12); border: 1px solid rgba(0,164,183,0.35); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #6FD8E2; margin-bottom: 28px;">
+        Fachadas · Structural Glazing · Esquadrias
+      </div>
+      <h1 style="margin: 0 0 20px; font-size: clamp(34px, 5.5vw, 64px); line-height: 1.08; font-weight: 600; letter-spacing: -0.02em; color: #F4F9FA; text-wrap: balance;">
+        Arquitetura em vidro com <span style="background: linear-gradient(90deg, #2FC9D6, #7AC7FF); -webkit-background-clip: text; background-clip: text; color: transparent;">precisão de engenharia</span>
+      </h1>
+      <p style="margin: 0 0 36px; max-width: 560px; font-size: clamp(15px, 2vw, 18px); line-height: 1.6; font-weight: 300; color: #B8C6CC; text-wrap: pretty;">
+        Projetamos e instalamos fachadas em pele de vidro e esquadrias de alumínio sob medida para obras que exigem acabamento premium. <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8em; color: rgba(255,255,255,0.35);">[texto placeholder]</span>
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+        <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border-radius: 999px; font-size: 16px; font-weight: 600; color: #06282C; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,164,183,0.5), inset 0 1px 0 rgba(255,255,255,0.45); transition: all 0.25s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 12px 44px rgba(0,164,183,0.75), inset 0 1px 0 rgba(255,255,255,0.55);">
+          Solicitar orçamento no WhatsApp
+        </a>
+        <a href="#solucoes" style="padding: 16px 28px; border-radius: 999px; font-size: 15px; font-weight: 500; color: #DCE7EA; background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.14); transition: all 0.25s ease;" style-hover="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25);">
+          Conhecer soluções
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 3. SOLUÇÕES ══════════════ -->
+  <section id="solucoes" data-screen-label="Soluções" style="padding: clamp(72px, 10vw, 130px) clamp(16px, 5vw, 64px); max-width: 1240px; margin: 0 auto;">
+    <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; margin-bottom: 56px;">
+      <div style="font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #00A4B7; margin-bottom: 14px;">Soluções</div>
+      <h2 style="margin: 0; font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: -0.02em; color: #F4F9FA; max-width: 640px; text-wrap: balance;">Do projeto à instalação, em vidro e alumínio</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px;">
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.05s, transform 0.8s ease 0.05s; padding: 32px; border-radius: 20px; background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);" style-hover="border-color: rgba(0,164,183,0.5); box-shadow: 0 16px 50px rgba(0,164,183,0.22), inset 0 1px 0 rgba(255,255,255,0.28);">
+        <div style="width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: rgba(0,164,183,0.14); border: 1px solid rgba(0,164,183,0.4); box-shadow: 0 0 18px rgba(0,164,183,0.25);"><span style="width: 18px; height: 18px; border: 2px solid #2FC9D6; border-radius: 3px; display: block;"></span></div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; color: #F4F9FA;">Fachadas em pele de vidro</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: #A9B8BE;">Superfícies contínuas de vidro que valorizam a estética do edifício. [placeholder]</p>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s; padding: 32px; border-radius: 20px; background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);" style-hover="border-color: rgba(0,164,183,0.5); box-shadow: 0 16px 50px rgba(0,164,183,0.22), inset 0 1px 0 rgba(255,255,255,0.28);">
+        <div style="width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: rgba(0,164,183,0.14); border: 1px solid rgba(0,164,183,0.4); box-shadow: 0 0 18px rgba(0,164,183,0.25);"><span style="width: 18px; height: 18px; border: 2px solid #2FC9D6; transform: rotate(45deg); display: block;"></span></div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; color: #F4F9FA;">Structural glazing</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: #A9B8BE;">Fixação estrutural sem caixilhos aparentes, para linhas puras. [placeholder]</p>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s; padding: 32px; border-radius: 20px; background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);" style-hover="border-color: rgba(0,164,183,0.5); box-shadow: 0 16px 50px rgba(0,164,183,0.22), inset 0 1px 0 rgba(255,255,255,0.28);">
+        <div style="width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: rgba(0,164,183,0.14); border: 1px solid rgba(0,164,183,0.4); box-shadow: 0 0 18px rgba(0,164,183,0.25);"><span style="width: 22px; height: 14px; border: 2px solid #2FC9D6; border-radius: 2px; display: block;"></span></div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; color: #F4F9FA;">Esquadrias de alumínio</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: #A9B8BE;">Linhas sob medida com vedação e desempenho superiores. [placeholder]</p>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.05s, transform 0.8s ease 0.05s; padding: 32px; border-radius: 20px; background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);" style-hover="border-color: rgba(0,164,183,0.5); box-shadow: 0 16px 50px rgba(0,164,183,0.22), inset 0 1px 0 rgba(255,255,255,0.28);">
+        <div style="width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: rgba(0,164,183,0.14); border: 1px solid rgba(0,164,183,0.4); box-shadow: 0 0 18px rgba(0,164,183,0.25);"><span style="width: 20px; height: 12px; border-top: 2px solid #2FC9D6; border-bottom: 2px solid #2FC9D6; display: block;"></span></div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; color: #F4F9FA;">Guarda-corpos de vidro</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: #A9B8BE;">Segurança e transparência para sacadas, escadas e mezaninos. [placeholder]</p>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s; padding: 32px; border-radius: 20px; background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);" style-hover="border-color: rgba(0,164,183,0.5); box-shadow: 0 16px 50px rgba(0,164,183,0.22), inset 0 1px 0 rgba(255,255,255,0.28);">
+        <div style="width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: rgba(0,164,183,0.14); border: 1px solid rgba(0,164,183,0.4); box-shadow: 0 0 18px rgba(0,164,183,0.25);"><span style="width: 10px; height: 20px; border: 2px solid #2FC9D6; border-radius: 2px; display: block;"></span></div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; color: #F4F9FA;">Portas e janelas</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: #A9B8BE;">Conforto térmico e acústico com design contemporâneo. [placeholder]</p>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s; padding: 32px; border-radius: 20px; background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);" style-hover="border-color: rgba(0,164,183,0.5); box-shadow: 0 16px 50px rgba(0,164,183,0.22), inset 0 1px 0 rgba(255,255,255,0.28);">
+        <div style="width: 46px; height: 46px; border-radius: 13px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; background: rgba(0,164,183,0.14); border: 1px solid rgba(0,164,183,0.4); box-shadow: 0 0 18px rgba(0,164,183,0.25);"><span style="width: 18px; height: 18px; border: 2px solid #2FC9D6; border-radius: 50%; display: block;"></span></div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 600; color: #F4F9FA;">Manutenção</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.6; font-weight: 300; color: #A9B8BE;">Inspeção, vedação e reposição com atendimento ágil. [placeholder]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 4. DIFERENCIAIS ══════════════ -->
+  <section data-screen-label="Diferenciais" style="padding: clamp(56px, 8vw, 100px) clamp(16px, 5vw, 64px);">
+    <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; max-width: 1240px; margin: 0 auto; padding: clamp(32px, 5vw, 56px); border-radius: 26px; background: linear-gradient(120deg, rgba(49,39,131,0.22), rgba(0,164,183,0.10) 60%, rgba(255,255,255,0.04)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(24px, 4vw, 44px);">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="width: 40px; height: 40px; border-radius: 50%; background: rgba(0,164,183,0.16); border: 1px solid rgba(0,164,183,0.45); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 16px rgba(0,164,183,0.3);"><span style="width: 14px; height: 14px; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border-radius: 3px; display: block;"></span></span>
+          <strong style="font-size: 16px; font-weight: 600; color: #F4F9FA;">Projetos sob medida</strong>
+          <span style="font-size: 14px; font-weight: 300; line-height: 1.55; color: #A9B8BE;">Cada obra é dimensionada para o seu projeto arquitetônico.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="width: 40px; height: 40px; border-radius: 50%; background: rgba(0,164,183,0.16); border: 1px solid rgba(0,164,183,0.45); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 16px rgba(0,164,183,0.3);"><span style="width: 14px; height: 14px; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border-radius: 50%; display: block;"></span></span>
+          <strong style="font-size: 16px; font-weight: 600; color: #F4F9FA;">Prazo cumprido</strong>
+          <span style="font-size: 14px; font-weight: 300; line-height: 1.55; color: #A9B8BE;">Cronograma transparente do orçamento à entrega.</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="width: 40px; height: 40px; border-radius: 50%; background: rgba(0,164,183,0.16); border: 1px solid rgba(0,164,183,0.45); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 16px rgba(0,164,183,0.3);"><span style="width: 14px; height: 14px; background: linear-gradient(135deg, #2FC9D6, #00A4B7); transform: rotate(45deg); display: block;"></span></span>
+          <strong style="font-size: 16px; font-weight: 600; color: #F4F9FA;">Garantia</strong>
+          <span style="font-size: 14px; font-weight: 300; line-height: 1.55; color: #A9B8BE;">Materiais certificados e garantia de instalação. [placeholder]</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span style="width: 40px; height: 40px; border-radius: 50%; background: rgba(0,164,183,0.16); border: 1px solid rgba(0,164,183,0.45); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 16px rgba(0,164,183,0.3);"><span style="width: 16px; height: 10px; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border-radius: 999px; display: block;"></span></span>
+          <strong style="font-size: 16px; font-weight: 600; color: #F4F9FA;">Acabamento premium</strong>
+          <span style="font-size: 14px; font-weight: 300; line-height: 1.55; color: #A9B8BE;">Detalhes de vedação e alinhamento com padrão elevado.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 5. PORTFÓLIO ══════════════ -->
+  <section id="portfolio" data-screen-label="Portfólio" style="padding: clamp(72px, 10vw, 130px) clamp(16px, 5vw, 64px); max-width: 1240px; margin: 0 auto;">
+    <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; margin-bottom: 56px;">
+      <div style="font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #00A4B7; margin-bottom: 14px;">Portfólio</div>
+      <h2 style="margin: 0; font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: -0.02em; color: #F4F9FA; max-width: 640px; text-wrap: balance;">Obras que refletem o nosso padrão</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15); cursor: pointer;">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px), linear-gradient(160deg, rgba(0,164,183,0.14), rgba(49,39,131,0.20)); transition: transform 0.5s ease;" style-hover="transform: scale(1.06);"></div>
+        <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: rgba(10,12,15,0.5); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; font-weight: 500; color: #EAF0F2;">Edifício corporativo</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">[foto da obra]</span>
+        </div>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.06s, transform 0.8s ease 0.06s; position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15); cursor: pointer;">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px), linear-gradient(200deg, rgba(49,39,131,0.22), rgba(0,164,183,0.12)); transition: transform 0.5s ease;" style-hover="transform: scale(1.06);"></div>
+        <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: rgba(10,12,15,0.5); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; font-weight: 500; color: #EAF0F2;">Fachada residencial</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">[foto da obra]</span>
+        </div>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.12s, transform 0.8s ease 0.12s; position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15); cursor: pointer;">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px), linear-gradient(140deg, rgba(0,164,183,0.18), rgba(16,19,24,0.6)); transition: transform 0.5s ease;" style-hover="transform: scale(1.06);"></div>
+        <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: rgba(10,12,15,0.5); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; font-weight: 500; color: #EAF0F2;">Structural glazing</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">[foto da obra]</span>
+        </div>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15); cursor: pointer;">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px), linear-gradient(220deg, rgba(0,164,183,0.10), rgba(49,39,131,0.24)); transition: transform 0.5s ease;" style-hover="transform: scale(1.06);"></div>
+        <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: rgba(10,12,15,0.5); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; font-weight: 500; color: #EAF0F2;">Guarda-corpo panorâmico</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">[foto da obra]</span>
+        </div>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.06s, transform 0.8s ease 0.06s; position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15); cursor: pointer;">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px), linear-gradient(170deg, rgba(16,19,24,0.6), rgba(0,164,183,0.16)); transition: transform 0.5s ease;" style-hover="transform: scale(1.06);"></div>
+        <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: rgba(10,12,15,0.5); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; font-weight: 500; color: #EAF0F2;">Esquadrias sob medida</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">[foto da obra]</span>
+        </div>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.12s, transform 0.8s ease 0.12s; position: relative; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15); cursor: pointer;">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 22px), linear-gradient(150deg, rgba(49,39,131,0.18), rgba(0,164,183,0.14)); transition: transform 0.5s ease;" style-hover="transform: scale(1.06);"></div>
+        <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: rgba(10,12,15,0.5); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; font-weight: 500; color: #EAF0F2;">Fachada comercial</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.35);">[foto da obra]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 6. SOBRE ══════════════ -->
+  <section id="sobre" data-screen-label="Sobre" style="padding: clamp(56px, 8vw, 100px) clamp(16px, 5vw, 64px); max-width: 1240px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; align-items: stretch;">
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; padding: clamp(32px, 5vw, 52px); border-radius: 24px; background: linear-gradient(160deg, rgba(255,255,255,0.09), rgba(255,255,255,0.02)); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 16px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2);">
+        <div style="font-size: 13px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #00A4B7; margin-bottom: 14px;">Sobre a Aluplex</div>
+        <h2 style="margin: 0 0 18px; font-size: clamp(26px, 3.5vw, 38px); font-weight: 600; letter-spacing: -0.02em; color: #F4F9FA; text-wrap: balance;">Especialistas em vidro e alumínio</h2>
+        <p style="margin: 0 0 14px; font-size: 15.5px; line-height: 1.7; font-weight: 300; color: #B8C6CC; text-wrap: pretty;">A Aluplex é uma empresa brasileira especializada em fachadas de vidro e esquadrias de alumínio, atendendo obras residenciais, comerciais e corporativas. <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8em; color: rgba(255,255,255,0.35);">[texto institucional placeholder]</span></p>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.7; font-weight: 300; color: #B8C6CC; text-wrap: pretty;">Da concepção do projeto à instalação final, unimos engenharia, estética e segurança em cada m² entregue. <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8em; color: rgba(255,255,255,0.35);">[placeholder]</span></p>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s; position: relative; min-height: 320px; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 16px 50px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.15); background: repeating-linear-gradient(115deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 24px), linear-gradient(200deg, rgba(0,164,183,0.16), rgba(49,39,131,0.22) 70%, rgba(10,10,12,0.8)); display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.3); border: 1px dashed rgba(255,255,255,0.18); border-radius: 8px; padding: 8px 14px;">[ imagem: equipe / obra em andamento ]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 7. NÚMEROS ══════════════ -->
+  <section data-screen-label="Números" style="padding: clamp(56px, 8vw, 100px) clamp(16px, 5vw, 64px); max-width: 1100px; margin: 0 auto;">
+    <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+      <div style="text-align: center; padding: 40px 24px; border-radius: 22px; background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">
+        <div style="font-size: clamp(40px, 5vw, 56px); font-weight: 700; letter-spacing: -0.02em; background: linear-gradient(120deg, #2FC9D6, #7AC7FF); -webkit-background-clip: text; background-clip: text; color: transparent;"><span data-count="250">0</span>+</div>
+        <div style="margin-top: 8px; font-size: 15px; font-weight: 400; color: #A9B8BE;">obras entregues</div>
+      </div>
+      <div style="text-align: center; padding: 40px 24px; border-radius: 22px; background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">
+        <div style="font-size: clamp(40px, 5vw, 56px); font-weight: 700; letter-spacing: -0.02em; background: linear-gradient(120deg, #2FC9D6, #7AC7FF); -webkit-background-clip: text; background-clip: text; color: transparent;"><span data-count="120000">0</span></div>
+        <div style="margin-top: 8px; font-size: 15px; font-weight: 400; color: #A9B8BE;">m² instalados</div>
+      </div>
+      <div style="text-align: center; padding: 40px 24px; border-radius: 22px; background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.2);">
+        <div style="font-size: clamp(40px, 5vw, 56px); font-weight: 700; letter-spacing: -0.02em; background: linear-gradient(120deg, #2FC9D6, #7AC7FF); -webkit-background-clip: text; background-clip: text; color: transparent;"><span data-count="15">0</span></div>
+        <div style="margin-top: 8px; font-size: 15px; font-weight: 400; color: #A9B8BE;">anos de mercado</div>
+      </div>
+    </div>
+    <p style="text-align: center; margin: 18px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.25);">[números placeholder — substituir pelos reais]</p>
+  </section>
+
+  <!-- ══════════════ 8. CTA FINAL ══════════════ -->
+  <section id="contato" data-screen-label="CTA Final" style="padding: clamp(72px, 10vw, 140px) clamp(16px, 5vw, 64px); position: relative; overflow: hidden;">
+    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 720px; height: 480px; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,164,183,0.20), transparent); filter: blur(30px); pointer-events: none;"></div>
+    <div data-reveal style="opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease, transform 0.9s ease; position: relative; max-width: 880px; margin: 0 auto; text-align: center; padding: clamp(40px, 7vw, 80px) clamp(24px, 5vw, 64px); border-radius: 30px; background: linear-gradient(160deg, rgba(255,255,255,0.11), rgba(0,164,183,0.06) 60%, rgba(255,255,255,0.03)); backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5); border: 1px solid rgba(0,164,183,0.35); box-shadow: 0 30px 90px rgba(0,0,0,0.6), 0 0 60px rgba(0,164,183,0.18), inset 0 1px 0 rgba(255,255,255,0.3);">
+      <h2 style="margin: 0 0 16px; font-size: clamp(30px, 4.5vw, 52px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.12; color: #F4F9FA; text-wrap: balance;">Sua obra merece uma fachada à altura</h2>
+      <p style="margin: 0 auto 36px; max-width: 520px; font-size: clamp(15px, 2vw, 17px); line-height: 1.6; font-weight: 300; color: #B8C6CC; text-wrap: pretty;">Fale agora com a nossa equipe e receba um orçamento sob medida, sem compromisso.</p>
+      <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 40px; border-radius: 999px; font-size: 17px; font-weight: 600; color: #06282C; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border: 1px solid rgba(255,255,255,0.35); box-shadow: 0 10px 40px rgba(0,164,183,0.55), inset 0 1px 0 rgba(255,255,255,0.5); transition: all 0.25s ease;" style-hover="transform: translateY(-2px) scale(1.02); box-shadow: 0 14px 54px rgba(0,164,183,0.8), inset 0 1px 0 rgba(255,255,255,0.6);">
+        Solicitar orçamento pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════ 9. FOOTER GLASS ══════════════ -->
+  <footer data-screen-label="Footer" style="margin-top: 40px; padding: clamp(40px, 6vw, 64px) clamp(16px, 5vw, 64px) 32px; background: rgba(12,14,18,0.6); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-top: 1px solid rgba(255,255,255,0.09);">
+    <div style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px;">
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <img src="assets/aluplex-logo.png" alt="Aluplex" style="height: 44px; width: fit-content; filter: drop-shadow(0 0 10px rgba(0,164,183,0.3)) brightness(1.15);">
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.6; font-weight: 300; color: #8FA0A7; max-width: 280px;">Fachadas de vidro e esquadrias de alumínio com padrão premium. [placeholder]</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+        <strong style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #6FD8E2; margin-bottom: 6px;">Contato</strong>
+        <span style="color: #A9B8BE;">(00) 0000-0000 [placeholder]</span>
+        <span style="color: #A9B8BE;">contato@aluplex.com.br [placeholder]</span>
+        <a href="{{ waLink }}" target="_blank" rel="noopener">WhatsApp — solicitar orçamento</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+        <strong style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #6FD8E2; margin-bottom: 6px;">Endereço</strong>
+        <span style="color: #A9B8BE; line-height: 1.6;">Rua Exemplo, 000 — Bairro<br>Cidade / UF — CEP 00000-000<br>[placeholder]</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+        <strong style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #6FD8E2; margin-bottom: 6px;">Redes sociais</strong>
+        <a href="#" style="color: #A9B8BE;" style-hover="color: #6FD8E2;">Instagram [placeholder]</a>
+        <a href="#" style="color: #A9B8BE;" style-hover="color: #6FD8E2;">Facebook [placeholder]</a>
+        <a href="#" style="color: #A9B8BE;" style-hover="color: #6FD8E2;">LinkedIn [placeholder]</a>
+      </div>
+    </div>
+    <div style="max-width: 1240px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 12.5px; color: #6C7A81;">
+      <span>© 2026 Aluplex — Fachadas e Esquadrias. Todos os direitos reservados.</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.22);">[CNPJ placeholder]</span>
+    </div>
+  </footer>
+
+  <!-- ══════════════ BOTÃO FLUTUANTE WHATSAPP ══════════════ -->
+  <sc-if value="{{ showFloatingButton }}" hint-placeholder-val="{{ true }}">
+    <a href="{{ waLink }}" target="_blank" rel="noopener" aria-label="WhatsApp" style="position: fixed; right: 22px; bottom: 22px; z-index: 200; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2FC9D6, #00A4B7); border: 1px solid rgba(255,255,255,0.35); box-shadow: 0 10px 30px rgba(0,164,183,0.5), inset 0 1px 0 rgba(255,255,255,0.5); animation: pulseRing 2.6s ease-out infinite; transition: transform 0.2s ease;" style-hover="transform: scale(1.08);">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="#06282C"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4-.1-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>
+    </a>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;whatsappNumber&quot;: {
+    &quot;editor&quot;: &quot;text&quot;,
+    &quot;default&quot;: &quot;00000000000&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;WhatsApp&quot;,
+    &quot;description&quot;: &quot;DDD + número, só dígitos (ex.: 11999999999). O 55 do Brasil já é adicionado.&quot;
+  },
+  &quot;showFloatingButton&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: true,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;WhatsApp&quot;
+  }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    // Número no formato DDD+numero, só dígitos. Placeholder até o cliente informar.
+    const num = (this.props.whatsappNumber ?? "00000000000").replace(/\D/g, "");
+    return {
+      waLink: "https://wa.me/55" + num + "?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20fachada%2Fesquadria.",
+      showFloatingButton: this.props.showFloatingButton ?? true,
+    };
+  }
+
+  componentDidMount() {
+    const root = document;
+
+    // Animações de entrada (fade/slide) ao rolar
+    this._io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.style.opacity = "1";
+          e.target.style.transform = "translateY(0)";
+          this._io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+    root.querySelectorAll("[data-reveal]").forEach((el) => this._io.observe(el));
+
+    // Contadores animados
+    this._ioCount = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        this._ioCount.unobserve(e.target);
+        const target = parseInt(e.target.getAttribute("data-count"), 10);
+        const t0 = performance.now(), dur = 1800;
+        const tick = (t) => {
+          const p = Math.min(1, (t - t0) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          e.target.textContent = Math.round(target * eased).toLocaleString("pt-BR");
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.4 });
+    root.querySelectorAll("[data-count]").forEach((el) => this._ioCount.observe(el));
+
+    // Parallax leve no hero
+    this._onScroll = () => {
+      const y = window.scrollY;
+      root.querySelectorAll("[data-parallax]").forEach((el) => {
+        const f = parseFloat(el.getAttribute("data-parallax")) || 0.2;
+        el.style.transform = "translateY(" + y * f + "px)";
+      });
+    };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._ioCount) this._ioCount.disconnect();
+    window.removeEventListener("scroll", this._onScroll);
+  }
+}
+</script>
+</body>
+</html>
