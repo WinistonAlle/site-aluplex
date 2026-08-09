@@ -1,0 +1,8 @@
+# Imagens de origem e capturas de tela — ficam versionadas no GitHub,
+# mas o site nao as usa, entao nao vao para o servidor.
+uploads/
+
+# Documento fonte do Claude Design e sua miniatura.
+# O site e servido pelo index.html, que e uma copia deste arquivo.
+*.dc.html
+.thumbnail
