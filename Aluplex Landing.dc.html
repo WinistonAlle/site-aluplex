@@ -9,6 +9,16 @@
 <x-dc>
 <helmet>
   <title>ALUPLEX, Fachadas de Vidro e Esquadrias de Alumínio</title>
+  <meta name="description" content="Fachadas em pele de vidro, structural glazing, esquadrias de alumínio e guarda-corpos sob medida para obras de alto padrão. Engenharia própria, prazo cumprido e garantia de instalação.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ALUPLEX, Fachadas de Vidro e Esquadrias de Alumínio">
+  <meta property="og:description" content="Fachadas em pele de vidro, structural glazing, esquadrias de alumínio e guarda-corpos sob medida para obras de alto padrão. Engenharia própria, prazo cumprido e garantia de instalação.">
+  <meta property="og:image" content="assets/hero-fachada.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ALUPLEX, Fachadas de Vidro e Esquadrias de Alumínio">
+  <meta name="twitter:description" content="Fachadas em pele de vidro, structural glazing e esquadrias de alumínio sob medida para obras de alto padrão.">
+  <meta name="twitter:image" content="assets/hero-fachada.png">
+  <link rel="icon" type="image/png" href="assets/aluplex-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,6 +30,11 @@
     ::selection { background: rgba(0,164,183,0.22); }
     h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     [data-revealed="true"] { opacity: 1 !important; transform: translateY(0) !important; }
+    /* ── FAQ accordion ── */
+    [data-faq-item] summary { list-style: none; cursor: pointer; }
+    [data-faq-item] summary::-webkit-details-marker { display: none; }
+    [data-faq-item] [data-faq-icon] { transition: transform 0.3s ease; }
+    [data-faq-item][open] [data-faq-icon] { transform: rotate(45deg); }
     /* ── fundo animado ── */
     @keyframes drift1 { 0% { transform: translate(0,0) scale(1); } 33% { transform: translate(12vw, 8vh) scale(1.25); } 66% { transform: translate(-6vw, 14vh) scale(0.9); } 100% { transform: translate(0,0) scale(1); } }
     @keyframes drift2 { 0% { transform: translate(0,0) scale(1); } 40% { transform: translate(-14vw, -6vh) scale(1.15); } 75% { transform: translate(8vw, -12vh) scale(0.85); } 100% { transform: translate(0,0) scale(1); } }
@@ -174,9 +189,13 @@
         <strong style="font-size: 17px; font-weight: 600; color: #0B1417;">Garantia</strong>
         <span style="font-size: 13.5px; font-weight: 300; line-height: 1.55; color: #61747B;">Materiais certificados e garantia de instalação, com suporte técnico após a entrega.</span>
       </div>
-      <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease 0.21s, transform 0.7s ease 0.21s; padding: 36px 32px; border-bottom: 1px solid rgba(9,42,48,0.14); display: flex; flex-direction: column; gap: 10px; transition: background 0.3s;" style-hover="background: rgba(0,164,183,0.044);">
+      <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease 0.21s, transform 0.7s ease 0.21s; padding: 36px 32px; border-right: 1px solid rgba(9,42,48,0.14); border-bottom: 1px solid rgba(9,42,48,0.14); display: flex; flex-direction: column; gap: 10px; transition: background 0.3s;" style-hover="background: rgba(0,164,183,0.044);">
         <strong style="font-size: 17px; font-weight: 600; color: #0B1417;">Acabamento premium</strong>
         <span style="font-size: 13.5px; font-weight: 300; line-height: 1.55; color: #61747B;">Vedação e alinhamento com padrão elevado.</span>
+      </div>
+      <div data-reveal style="opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease 0.28s, transform 0.7s ease 0.28s; padding: 36px 32px; border-bottom: 1px solid rgba(9,42,48,0.14); display: flex; flex-direction: column; gap: 10px; transition: background 0.3s;" style-hover="background: rgba(0,164,183,0.044);">
+        <strong style="font-size: 17px; font-weight: 600; color: #0B1417;">Engenharia certificada</strong>
+        <span style="font-size: 13.5px; font-weight: 300; line-height: 1.55; color: #61747B;">Projeto executivo com ART e cálculo estrutural conforme NBR 7199 e NBR 6123.</span>
       </div>
     </div>
   </section>
@@ -321,6 +340,56 @@
           <span style="font-size: clamp(38px, 4.5vw, 54px); font-weight: 800; letter-spacing: -0.03em; background: linear-gradient(120deg, #00B6C9, #007E8D); -webkit-background-clip: text; background-clip: text; color: transparent;"><span data-count="15">0</span></span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ════════ PERGUNTAS FREQUENTES ════════ -->
+  <section id="faq" data-screen-label="FAQ" style="padding: clamp(70px, 9vw, 120px) clamp(20px, 6vw, 90px) 0; max-width: 900px; margin: 0 auto;">
+    <div data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; margin-bottom: 36px; text-align: center;">
+      <h2 style="margin: 0; font-size: clamp(28px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; color: #0B1417; text-wrap: balance;">Perguntas <span style="color: #00A4B7;">frequentes</span></h2>
+    </div>
+    <div data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease 0.08s, transform 0.8s ease 0.08s; display: flex; flex-direction: column; gap: 12px;">
+
+      <details data-faq-item style="border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.78); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(9,42,48,0.14); box-shadow: 0 12px 40px rgba(13,45,52,0.077);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; font-size: 15.5px; font-weight: 600; color: #0B1417;">
+          Quais regiões vocês atendem?
+          <span data-faq-icon style="flex-shrink: 0; font-size: 20px; font-weight: 300; color: #00A4B7;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 26px 22px; font-size: 14.5px; line-height: 1.65; font-weight: 300; color: #40545B; text-wrap: pretty;">Atendemos obras em todo o Distrito Federal e entorno, e projetos de grande porte em outros estados mediante avaliação técnica. Fale com a gente pelo WhatsApp para confirmar a cobertura na sua região.</p>
+      </details>
+
+      <details data-faq-item style="border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.78); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(9,42,48,0.14); box-shadow: 0 12px 40px rgba(13,45,52,0.077);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; font-size: 15.5px; font-weight: 600; color: #0B1417;">
+          Qual o prazo médio de uma fachada ou esquadria?
+          <span data-faq-icon style="flex-shrink: 0; font-size: 20px; font-weight: 300; color: #00A4B7;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 26px 22px; font-size: 14.5px; line-height: 1.65; font-weight: 300; color: #40545B; text-wrap: pretty;">Varia com o porte da obra. Depois da visita técnica e do projeto executivo, entregamos um cronograma detalhado com datas de fabricação e instalação, e acompanhamos etapa por etapa até a entrega.</p>
+      </details>
+
+      <details data-faq-item style="border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.78); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(9,42,48,0.14); box-shadow: 0 12px 40px rgba(13,45,52,0.077);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; font-size: 15.5px; font-weight: 600; color: #0B1417;">
+          A instalação é feita por vocês ou terceirizada?
+          <span data-faq-icon style="flex-shrink: 0; font-size: 20px; font-weight: 300; color: #00A4B7;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 26px 22px; font-size: 14.5px; line-height: 1.65; font-weight: 300; color: #40545B; text-wrap: pretty;">Equipe própria, do início ao fim. Não terceirizamos a instalação, o que garante o mesmo padrão de acabamento visto no projeto executivo em toda obra que entregamos.</p>
+      </details>
+
+      <details data-faq-item style="border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.78); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(9,42,48,0.14); box-shadow: 0 12px 40px rgba(13,45,52,0.077);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; font-size: 15.5px; font-weight: 600; color: #0B1417;">
+          Como funciona a garantia?
+          <span data-faq-icon style="flex-shrink: 0; font-size: 20px; font-weight: 300; color: #00A4B7;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 26px 22px; font-size: 14.5px; line-height: 1.65; font-weight: 300; color: #40545B; text-wrap: pretty;">Garantia contratual sobre material e instalação, com suporte técnico após a entrega. As condições exatas variam por escopo e são detalhadas no orçamento.</p>
+      </details>
+
+      <details data-faq-item style="border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.78); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(9,42,48,0.14); box-shadow: 0 12px 40px rgba(13,45,52,0.077);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; font-size: 15.5px; font-weight: 600; color: #0B1417;">
+          Vocês fazem o cálculo estrutural e o projeto executivo?
+          <span data-faq-icon style="flex-shrink: 0; font-size: 20px; font-weight: 300; color: #00A4B7;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 26px 22px; font-size: 14.5px; line-height: 1.65; font-weight: 300; color: #40545B; text-wrap: pretty;">Sim, com engenharia própria e ART, do cálculo estrutural conforme NBR 7199 e NBR 6123 até o detalhamento de fabricação, sem depender de terceiros.</p>
+      </details>
+
     </div>
   </section>
 
