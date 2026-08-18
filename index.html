@@ -85,21 +85,15 @@
   <!-- ════════ 2. HERO, tipografia gigante + shards de vidro ════════ -->
   <section id="hero" data-screen-label="Hero" style="position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-start; padding: clamp(190px, 26vh, 290px) clamp(20px, 6vw, 90px) 60px; overflow: hidden;">
     <!-- foto de fundo fixa (parallax) -->
-    <div data-hero-bg style="position: absolute; inset: 0; background-image: url('assets/hero-fachada.png'); background-size: cover; background-position: center 20%; background-attachment: fixed; filter: saturate(0.62) brightness(1.06) contrast(0.96);"></div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,140,158,0.16), rgba(255,255,255,0.10)); mix-blend-mode: color;"></div>
-    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 85% 75% at 50% 45%, rgba(255,255,255,0.80) 0%, rgba(255,255,255,0.58) 55%, rgba(255,255,255,0.30) 100%), linear-gradient(0deg, rgba(244,248,249,0.96) 0%, transparent 32%), linear-gradient(180deg, rgba(255,255,255,0.75) 0%, transparent 22%);"></div>
+    <div data-hero-bg style="position: absolute; inset: 0; background-image: url('assets/hero-fachada.png'); background-size: cover; background-position: center 20%; background-attachment: fixed; filter: saturate(1.04) brightness(1.02) contrast(1.02);"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,140,158,0.06), rgba(255,255,255,0.03)); mix-blend-mode: color;"></div>
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 66% 56% at 50% 38%, rgba(255,255,255,0.46) 0%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0) 100%), linear-gradient(0deg, rgba(244,248,249,0.55) 0%, transparent 26%), linear-gradient(180deg, rgba(255,255,255,0.32) 0%, transparent 18%);"></div>
     <div style="position: relative; max-width: 1000px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center;">
-      <div style="position: absolute; top: clamp(-190px, -16vh, -110px); left: 50%; transform: translateX(-50%); width: min(760px, 90vw); height: min(420px, 46vh); pointer-events: none; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,255,255,0.55) 0%, rgba(0,164,183,0.10) 42%, transparent 74%); filter: blur(24px);"></div>
-      <img data-reveal src="assets/aluplex-logo.png" alt="Aluplex" style="opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease, transform 0.9s ease; height: clamp(64px, 8vw, 108px); width: auto; display: block; margin-bottom: 28px; filter: drop-shadow(0 6px 22px rgba(13,45,52,0.14));">
-      <h1 data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease 0.1s, transform 0.9s ease 0.1s; margin: 0 auto 30px; font-size: clamp(40px, 6.2vw, 80px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em; color: #0B1417; width: 100%; max-width: 15ch; text-align: center; text-wrap: balance; text-shadow: 0 2px 24px rgba(255,255,255,0.8);">
+      <div style="position: absolute; top: clamp(-210px, -18vh, -120px); left: 50%; transform: translateX(-50%); width: min(880px, 94vw); height: min(480px, 50vh); pointer-events: none; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255,255,255,0.65) 0%, rgba(0,164,183,0.16) 42%, transparent 74%); filter: blur(24px);"></div>
+      <img data-reveal src="assets/aluplex-logo.png" alt="Aluplex" style="opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease, transform 0.9s ease; height: clamp(92px, 12vw, 156px); width: auto; display: block; margin-bottom: 36px; filter: drop-shadow(0 10px 34px rgba(13,45,52,0.22)) drop-shadow(0 2px 8px rgba(13,45,52,0.16));">
+      <h1 data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease 0.1s, transform 0.9s ease 0.1s; margin: 0 auto 30px; font-size: clamp(40px, 6.2vw, 80px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em; color: #0B1417; width: 100%; max-width: 15ch; text-align: center; text-wrap: balance; text-shadow: 0 2px 6px rgba(255,255,255,0.9), 0 4px 32px rgba(255,255,255,0.85), 0 0 60px rgba(255,255,255,0.6);">
         Fachadas que redefinem a <span style="color: #00A4B7;">arquitetura</span>
       </h1>
-      <div data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(20px, 4vw, 48px);">
-        <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 18px 36px; border-radius: 999px; font-size: 16px; font-weight: 600; color: #FFFFFF; background: linear-gradient(135deg, #00B6C9, #007E8D); border: 1px solid rgba(0,110,124,0.35); box-shadow: 0 10px 32px rgba(0,164,183,0.35), inset 0 1px 0 rgba(255,255,255,0.35); transition: all 0.25s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 16px 44px rgba(0,164,183,0.45), inset 0 1px 0 rgba(255,255,255,0.45);">
-          Solicitar orçamento
-          <span style="font-size: 18px; line-height: 1;">→</span>
-        </a>
-      </div>
     </div>
 
   </section>
@@ -127,38 +121,38 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); grid-auto-rows: minmax(260px, auto); gap: 18px;">
       <!-- destaque grande -->
       <div data-bento data-reveal style="grid-column: span 2; opacity: 0; transform: translateY(30px); transition: all 0.8s ease; position: relative; overflow: hidden; padding: 40px; border-radius: 26px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 340px; background: linear-gradient(150deg, rgba(255,255,255,0.11), rgba(0,164,183,0.07) 45%, rgba(255,255,255,0.02)); backdrop-filter: blur(28px) saturate(1.7) brightness(1.12); -webkit-backdrop-filter: blur(28px) saturate(1.7) brightness(1.12); border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 24px 70px rgba(13,45,52,0.11), inset 0 1px 0 rgba(255,255,255,0.5), inset 0 -40px 80px -40px rgba(0,164,183,0.081); transition-property: opacity, transform, border-color, box-shadow;" style-hover="border-color: rgba(63,224,236,0.55); box-shadow: 0 28px 80px rgba(0,164,183,0.126), inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -40px 80px -40px rgba(0,164,183,0.135); transform: translateY(-4px);">
-        <div style="position: absolute; inset: 0; background-image: url('assets/solucao-destaque.png'); background-size: cover; background-position: center;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,9,11,0.88) 0%, rgba(8,9,11,0.35) 55%, rgba(8,9,11,0.15) 100%);"></div>
-        <h3 style="position: relative; margin: 0 0 10px; font-size: clamp(24px, 3vw, 34px); font-weight: 600; letter-spacing: -0.02em; color: #F4F9FA;">Fachadas em pele de vidro</h3>
-        <p style="position: relative; margin: 0; max-width: 480px; font-size: 15px; line-height: 1.6; font-weight: 300; color: #C4D2D8;">Superfícies contínuas de vidro que envolvem o edifício com leveza e imponência.</p>
+        <div style="position: absolute; inset: 0; background-image: url('assets/solucao-destaque.png'); background-size: cover; background-position: center; filter: brightness(1.08) saturate(1.02);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.34) 34%, rgba(255,255,255,0) 62%);"></div>
+        <h3 style="position: relative; margin: 0 0 10px; font-size: clamp(24px, 3vw, 34px); font-weight: 600; letter-spacing: -0.02em; color: #0B1417; text-shadow: 0 1px 10px rgba(255,255,255,0.8);">Fachadas em pele de vidro</h3>
+        <p style="position: relative; margin: 0; max-width: 480px; font-size: 15px; line-height: 1.6; font-weight: 300; color: #2E4149; text-shadow: 0 1px 8px rgba(255,255,255,0.75);">Superfícies contínuas de vidro que envolvem o edifício com leveza e imponência.</p>
       </div>
 
       <div data-bento data-reveal style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease 0.08s; position: relative; overflow: hidden; padding: 34px; border-radius: 26px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 260px; background: linear-gradient(160deg, rgba(255,255,255,0.09), rgba(49,39,131,0.10) 65%, rgba(255,255,255,0.02)); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 18px 55px rgba(13,45,52,0.099), inset 0 1px 0 rgba(255,255,255,0.45); transition-property: opacity, transform, border-color, box-shadow;" style-hover="border-color: rgba(63,224,236,0.5); transform: translateY(-4px); box-shadow: 0 24px 65px rgba(0,164,183,0.113), inset 0 1px 0 rgba(255,255,255,0.55);">
-        <div style="position: absolute; inset: 0; background-image: url('assets/sol-glazing.png'); background-size: cover; background-position: center;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,9,11,0.9) 0%, rgba(8,9,11,0.45) 55%, rgba(8,9,11,0.2) 100%);"></div>
-        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #F4F9FA;">Structural glazing</h3>
-        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #C4D2D8;">Fixação direta na estrutura, sem caixilhos aparentes.</p>
+        <div style="position: absolute; inset: 0; background-image: url('assets/sol-glazing.png'); background-size: cover; background-position: center; filter: brightness(1.08) saturate(1.02);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.38) 36%, rgba(255,255,255,0) 64%);"></div>
+        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #0B1417; text-shadow: 0 1px 10px rgba(255,255,255,0.8);">Structural glazing</h3>
+        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #2E4149; text-shadow: 0 1px 8px rgba(255,255,255,0.75);">Fixação direta na estrutura, sem caixilhos aparentes.</p>
       </div>
 
       <div data-bento data-reveal style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease 0.16s; position: relative; overflow: hidden; padding: 34px; border-radius: 26px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 260px; background: linear-gradient(160deg, rgba(255,255,255,0.09), rgba(0,164,183,0.08) 65%, rgba(255,255,255,0.02)); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 18px 55px rgba(13,45,52,0.099), inset 0 1px 0 rgba(255,255,255,0.45); transition-property: opacity, transform, border-color, box-shadow;" style-hover="border-color: rgba(63,224,236,0.5); transform: translateY(-4px); box-shadow: 0 24px 65px rgba(0,164,183,0.113), inset 0 1px 0 rgba(255,255,255,0.55);">
-        <div style="position: absolute; inset: 0; background-image: url('assets/sol-esquadrias.png'); background-size: cover; background-position: center;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,9,11,0.9) 0%, rgba(8,9,11,0.45) 55%, rgba(8,9,11,0.2) 100%);"></div>
-        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #F4F9FA;">Esquadrias de alumínio</h3>
-        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #C4D2D8;">Perfis sob medida, com pintura eletrostática ou anodizado.</p>
+        <div style="position: absolute; inset: 0; background-image: url('assets/sol-esquadrias.png'); background-size: cover; background-position: center; filter: brightness(1.08) saturate(1.02);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.38) 36%, rgba(255,255,255,0) 64%);"></div>
+        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #0B1417; text-shadow: 0 1px 10px rgba(255,255,255,0.8);">Esquadrias de alumínio</h3>
+        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #2E4149; text-shadow: 0 1px 8px rgba(255,255,255,0.75);">Perfis sob medida, com pintura eletrostática ou anodizado.</p>
       </div>
 
       <div data-bento data-reveal style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease 0.08s; position: relative; overflow: hidden; padding: 34px; border-radius: 26px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 260px; background: linear-gradient(160deg, rgba(255,255,255,0.09), rgba(0,164,183,0.08) 65%, rgba(255,255,255,0.02)); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 18px 55px rgba(13,45,52,0.099), inset 0 1px 0 rgba(255,255,255,0.45); transition-property: opacity, transform, border-color, box-shadow;" style-hover="border-color: rgba(63,224,236,0.5); transform: translateY(-4px); box-shadow: 0 24px 65px rgba(0,164,183,0.113), inset 0 1px 0 rgba(255,255,255,0.55);">
-        <div style="position: absolute; inset: 0; background-image: url('assets/sol-guardacorpo.png'); background-size: cover; background-position: center;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,9,11,0.9) 0%, rgba(8,9,11,0.45) 55%, rgba(8,9,11,0.2) 100%);"></div>
-        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #F4F9FA;">Guarda-corpos de vidro</h3>
-        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #C4D2D8;">Vidro laminado e inox para sacadas, escadas e mezaninos.</p>
+        <div style="position: absolute; inset: 0; background-image: url('assets/sol-guardacorpo.png'); background-size: cover; background-position: center; filter: brightness(1.08) saturate(1.02);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.38) 36%, rgba(255,255,255,0) 64%);"></div>
+        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #0B1417; text-shadow: 0 1px 10px rgba(255,255,255,0.8);">Guarda-corpos de vidro</h3>
+        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #2E4149; text-shadow: 0 1px 8px rgba(255,255,255,0.75);">Vidro laminado e inox para sacadas, escadas e mezaninos.</p>
       </div>
 
       <div data-bento data-reveal style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease 0.16s; position: relative; overflow: hidden; padding: 34px; border-radius: 26px; display: flex; flex-direction: column; justify-content: flex-end; min-height: 260px; background: linear-gradient(160deg, rgba(255,255,255,0.09), rgba(49,39,131,0.10) 65%, rgba(255,255,255,0.02)); backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.1); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 18px 55px rgba(13,45,52,0.099), inset 0 1px 0 rgba(255,255,255,0.45); transition-property: opacity, transform, border-color, box-shadow;" style-hover="border-color: rgba(63,224,236,0.5); transform: translateY(-4px); box-shadow: 0 24px 65px rgba(0,164,183,0.113), inset 0 1px 0 rgba(255,255,255,0.55);">
-        <div style="position: absolute; inset: 0; background-image: url('assets/sol-pivotante.png'); background-size: cover; background-position: center;"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,9,11,0.9) 0%, rgba(8,9,11,0.45) 55%, rgba(8,9,11,0.2) 100%);"></div>
-        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #F4F9FA;">Grandes vãos e pivotantes</h3>
-        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #C4D2D8;">Pivotantes gigantes, perfis slim e vãos integrados.</p>
+        <div style="position: absolute; inset: 0; background-image: url('assets/sol-pivotante.png'); background-size: cover; background-position: center; filter: brightness(1.08) saturate(1.02);"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(0deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.38) 36%, rgba(255,255,255,0) 64%);"></div>
+        <h3 style="position: relative; margin: 0 0 8px; font-size: 21px; font-weight: 600; color: #0B1417; text-shadow: 0 1px 10px rgba(255,255,255,0.8);">Grandes vãos e pivotantes</h3>
+        <p style="position: relative; margin: 0; font-size: 14px; line-height: 1.6; font-weight: 300; color: #2E4149; text-shadow: 0 1px 8px rgba(255,255,255,0.75);">Pivotantes gigantes, perfis slim e vãos integrados.</p>
       </div>
 
       
@@ -193,63 +187,63 @@
       <h2 style="margin: 0; font-size: clamp(32px, 5vw, 58px); font-weight: 700; letter-spacing: -0.03em; color: #0B1417; max-width: 560px; line-height: 1.05; text-wrap: balance;">Obras que refletem o nosso <span style="color: #00A4B7;">padrão</span></h2>
     </div>
     <div data-ag-strip data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; display: flex; flex-wrap: wrap; gap: 10px; height: clamp(360px, 54vh, 480px); perspective: 1400px;">
-      <div data-ag-panel onMouseEnter="{{ agEnter0 }}" onFocus="{{ agEnter0 }}" tabindex="0" aria-label="Torre corporativa" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #0A0C10; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow0 }}; transform: {{ agRot0 }};">
+      <div data-ag-panel onMouseEnter="{{ agEnter0 }}" onFocus="{{ agEnter0 }}" tabindex="0" aria-label="Torre corporativa" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #E9EFF1; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow0 }}; transform: {{ agRot0 }};">
         <div style="position: absolute; inset: 0; background-image: url('assets/port-torre.png'); background-size: cover; background-position: center; transition: filter 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1); filter: {{ agFilter0 }}; transform: {{ agShift0 }};" data-ag-media></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(6,8,10,0.82) 100%);"></div>
-        <div style="position: absolute; inset: 0; background: #06080A; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim0 }};" data-ag-dim></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(255,255,255,0.90) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: #FFFFFF; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim0 }};" data-ag-dim></div>
         <div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; pointer-events: none;">
-          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #3FE0EC; box-shadow: 0 0 12px rgba(63,224,236,0.6); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel0 }}; transform: {{ agSlide0 }};" data-ag-label></div>
+          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #00A4B7; box-shadow: 0 0 10px rgba(0,164,183,0.45); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel0 }}; transform: {{ agSlide0 }};" data-ag-label></div>
           <div style="min-width: 0; transition: opacity 0.5s ease 0.06s, transform 0.5s ease 0.06s; opacity: {{ agLabel0 }}; transform: {{ agSlide0 }};" data-ag-label>
-            <span style="display: block; font-size: 17px; font-weight: 600; color: #F4F9FA; white-space: nowrap; text-shadow: 0 2px 14px rgba(0,0,0,0.55);">Torre corporativa</span>
-            <span style="font-size: 12.5px; font-weight: 300; color: #9FB0B7; white-space: nowrap;">Pele de vidro · 8.400 m²</span>
+            <span style="display: block; font-size: 17px; font-weight: 600; color: #0B1417; white-space: nowrap; text-shadow: 0 1px 10px rgba(255,255,255,0.85);">Torre corporativa</span>
+            <span style="font-size: 12.5px; font-weight: 300; color: #46595F; white-space: nowrap; text-shadow: 0 1px 8px rgba(255,255,255,0.8);">Pele de vidro · 8.400 m²</span>
           </div>
         </div>
       </div>
-      <div data-ag-panel onMouseEnter="{{ agEnter1 }}" onFocus="{{ agEnter1 }}" tabindex="0" aria-label="Residencial alto padrão" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #0A0C10; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow1 }}; transform: {{ agRot1 }};">
+      <div data-ag-panel onMouseEnter="{{ agEnter1 }}" onFocus="{{ agEnter1 }}" tabindex="0" aria-label="Residencial alto padrão" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #E9EFF1; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow1 }}; transform: {{ agRot1 }};">
         <div style="position: absolute; inset: 0; background-image: url('assets/port-residencial.png'); background-size: cover; background-position: center; transition: filter 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1); filter: {{ agFilter1 }}; transform: {{ agShift1 }};" data-ag-media></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(6,8,10,0.82) 100%);"></div>
-        <div style="position: absolute; inset: 0; background: #06080A; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim1 }};" data-ag-dim></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(255,255,255,0.90) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: #FFFFFF; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim1 }};" data-ag-dim></div>
         <div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; pointer-events: none;">
-          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #3FE0EC; box-shadow: 0 0 12px rgba(63,224,236,0.6); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel1 }}; transform: {{ agSlide1 }};" data-ag-label></div>
+          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #00A4B7; box-shadow: 0 0 10px rgba(0,164,183,0.45); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel1 }}; transform: {{ agSlide1 }};" data-ag-label></div>
           <div style="min-width: 0; transition: opacity 0.5s ease 0.06s, transform 0.5s ease 0.06s; opacity: {{ agLabel1 }}; transform: {{ agSlide1 }};" data-ag-label>
-            <span style="display: block; font-size: 17px; font-weight: 600; color: #F4F9FA; white-space: nowrap; text-shadow: 0 2px 14px rgba(0,0,0,0.55);">Residencial alto padrão</span>
-            <span style="font-size: 12.5px; font-weight: 300; color: #9FB0B7; white-space: nowrap;">Esquadrias e guarda-corpos sob medida</span>
+            <span style="display: block; font-size: 17px; font-weight: 600; color: #0B1417; white-space: nowrap; text-shadow: 0 1px 10px rgba(255,255,255,0.85);">Residencial alto padrão</span>
+            <span style="font-size: 12.5px; font-weight: 300; color: #46595F; white-space: nowrap; text-shadow: 0 1px 8px rgba(255,255,255,0.8);">Esquadrias e guarda-corpos sob medida</span>
           </div>
         </div>
       </div>
-      <div data-ag-panel onMouseEnter="{{ agEnter2 }}" onFocus="{{ agEnter2 }}" tabindex="0" aria-label="Sede comercial" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #0A0C10; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow2 }}; transform: {{ agRot2 }};">
+      <div data-ag-panel onMouseEnter="{{ agEnter2 }}" onFocus="{{ agEnter2 }}" tabindex="0" aria-label="Sede comercial" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #E9EFF1; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow2 }}; transform: {{ agRot2 }};">
         <div style="position: absolute; inset: 0; background-image: url('assets/port-sede.png'); background-size: cover; background-position: center; transition: filter 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1); filter: {{ agFilter2 }}; transform: {{ agShift2 }};" data-ag-media></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(6,8,10,0.82) 100%);"></div>
-        <div style="position: absolute; inset: 0; background: #06080A; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim2 }};" data-ag-dim></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(255,255,255,0.90) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: #FFFFFF; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim2 }};" data-ag-dim></div>
         <div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; pointer-events: none;">
-          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #3FE0EC; box-shadow: 0 0 12px rgba(63,224,236,0.6); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel2 }}; transform: {{ agSlide2 }};" data-ag-label></div>
+          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #00A4B7; box-shadow: 0 0 10px rgba(0,164,183,0.45); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel2 }}; transform: {{ agSlide2 }};" data-ag-label></div>
           <div style="min-width: 0; transition: opacity 0.5s ease 0.06s, transform 0.5s ease 0.06s; opacity: {{ agLabel2 }}; transform: {{ agSlide2 }};" data-ag-label>
-            <span style="display: block; font-size: 17px; font-weight: 600; color: #F4F9FA; white-space: nowrap; text-shadow: 0 2px 14px rgba(0,0,0,0.55);">Sede comercial</span>
-            <span style="font-size: 12.5px; font-weight: 300; color: #9FB0B7; white-space: nowrap;">Structural glazing · 3.200 m²</span>
+            <span style="display: block; font-size: 17px; font-weight: 600; color: #0B1417; white-space: nowrap; text-shadow: 0 1px 10px rgba(255,255,255,0.85);">Sede comercial</span>
+            <span style="font-size: 12.5px; font-weight: 300; color: #46595F; white-space: nowrap; text-shadow: 0 1px 8px rgba(255,255,255,0.8);">Structural glazing · 3.200 m²</span>
           </div>
         </div>
       </div>
-      <div data-ag-panel onMouseEnter="{{ agEnter3 }}" onFocus="{{ agEnter3 }}" tabindex="0" aria-label="Varanda panorâmica" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #0A0C10; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow3 }}; transform: {{ agRot3 }};">
+      <div data-ag-panel onMouseEnter="{{ agEnter3 }}" onFocus="{{ agEnter3 }}" tabindex="0" aria-label="Varanda panorâmica" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #E9EFF1; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow3 }}; transform: {{ agRot3 }};">
         <div style="position: absolute; inset: 0; background-image: url('assets/port-varanda.png'); background-size: cover; background-position: center; transition: filter 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1); filter: {{ agFilter3 }}; transform: {{ agShift3 }};" data-ag-media></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(6,8,10,0.82) 100%);"></div>
-        <div style="position: absolute; inset: 0; background: #06080A; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim3 }};" data-ag-dim></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(255,255,255,0.90) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: #FFFFFF; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim3 }};" data-ag-dim></div>
         <div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; pointer-events: none;">
-          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #3FE0EC; box-shadow: 0 0 12px rgba(63,224,236,0.6); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel3 }}; transform: {{ agSlide3 }};" data-ag-label></div>
+          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #00A4B7; box-shadow: 0 0 10px rgba(0,164,183,0.45); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel3 }}; transform: {{ agSlide3 }};" data-ag-label></div>
           <div style="min-width: 0; transition: opacity 0.5s ease 0.06s, transform 0.5s ease 0.06s; opacity: {{ agLabel3 }}; transform: {{ agSlide3 }};" data-ag-label>
-            <span style="display: block; font-size: 17px; font-weight: 600; color: #F4F9FA; white-space: nowrap; text-shadow: 0 2px 14px rgba(0,0,0,0.55);">Varanda panorâmica</span>
-            <span style="font-size: 12.5px; font-weight: 300; color: #9FB0B7; white-space: nowrap;">Guarda-corpo de vidro laminado</span>
+            <span style="display: block; font-size: 17px; font-weight: 600; color: #0B1417; white-space: nowrap; text-shadow: 0 1px 10px rgba(255,255,255,0.85);">Varanda panorâmica</span>
+            <span style="font-size: 12.5px; font-weight: 300; color: #46595F; white-space: nowrap; text-shadow: 0 1px 8px rgba(255,255,255,0.8);">Guarda-corpo de vidro laminado</span>
           </div>
         </div>
       </div>
-      <div data-ag-panel onMouseEnter="{{ agEnter4 }}" onFocus="{{ agEnter4 }}" tabindex="0" aria-label="Fachada comercial" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #0A0C10; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow4 }}; transform: {{ agRot4 }};">
+      <div data-ag-panel onMouseEnter="{{ agEnter4 }}" onFocus="{{ agEnter4 }}" tabindex="0" aria-label="Fachada comercial" style="position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 18px; cursor: pointer; outline: none; background: #E9EFF1; box-shadow: 0 16px 50px rgba(13,45,52,0.11), inset 0 0 0 1px rgba(255,255,255,0.27); transform-style: preserve-3d; transition: flex-grow 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); flex-grow: {{ agGrow4 }}; transform: {{ agRot4 }};">
         <div style="position: absolute; inset: 0; background-image: url('assets/port-loja.png'); background-size: cover; background-position: center; transition: filter 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1); filter: {{ agFilter4 }}; transform: {{ agShift4 }};" data-ag-media></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(6,8,10,0.82) 100%);"></div>
-        <div style="position: absolute; inset: 0; background: #06080A; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim4 }};" data-ag-dim></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(255,255,255,0.90) 100%);"></div>
+        <div style="position: absolute; inset: 0; background: #FFFFFF; pointer-events: none; transition: opacity 0.6s ease; opacity: {{ agDim4 }};" data-ag-dim></div>
         <div style="position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 12px; pointer-events: none;">
-          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #3FE0EC; box-shadow: 0 0 12px rgba(63,224,236,0.6); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel4 }}; transform: {{ agSlide4 }};" data-ag-label></div>
+          <div style="flex: 0 0 auto; width: 3px; height: 34px; border-radius: 3px; background: #00A4B7; box-shadow: 0 0 10px rgba(0,164,183,0.45); transition: opacity 0.5s ease, transform 0.5s ease; opacity: {{ agLabel4 }}; transform: {{ agSlide4 }};" data-ag-label></div>
           <div style="min-width: 0; transition: opacity 0.5s ease 0.06s, transform 0.5s ease 0.06s; opacity: {{ agLabel4 }}; transform: {{ agSlide4 }};" data-ag-label>
-            <span style="display: block; font-size: 17px; font-weight: 600; color: #F4F9FA; white-space: nowrap; text-shadow: 0 2px 14px rgba(0,0,0,0.55);">Fachada comercial</span>
-            <span style="font-size: 12.5px; font-weight: 300; color: #9FB0B7; white-space: nowrap;">Pele de vidro · edifício comercial</span>
+            <span style="display: block; font-size: 17px; font-weight: 600; color: #0B1417; white-space: nowrap; text-shadow: 0 1px 10px rgba(255,255,255,0.85);">Fachada comercial</span>
+            <span style="font-size: 12.5px; font-weight: 300; color: #46595F; white-space: nowrap; text-shadow: 0 1px 8px rgba(255,255,255,0.8);">Pele de vidro · edifício comercial</span>
           </div>
         </div>
       </div>
@@ -306,10 +300,10 @@
         <p style="margin: 0 0 14px; font-size: 15.5px; line-height: 1.75; font-weight: 300; color: #40545B; text-wrap: pretty;">A Aluplex é especializada em fachadas de grande porte, pele de vidro e structural glazing, e esquadrias de alumínio para obras corporativas, comerciais e residenciais de alto padrão. Unimos engenharia, precisão de fabricação e instalação própria para entregar fachadas que impressionam à primeira vista, e continuam impecáveis anos depois.</p>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.75; font-weight: 300; color: #40545B; text-wrap: pretty;">Do estudo de viabilidade ao pós-obra, cada etapa passa pelo nosso padrão: levantamento técnico no local, projeto executivo detalhado, fabricação sob medida e montagem por equipe especializada.</p>
       </div>
-      <div data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease 0.05s, transform 0.8s ease 0.05s; position: relative; min-height: 380px; border-radius: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,0.16); box-shadow: 0 24px 70px rgba(13,45,52,0.121), inset 0 1px 0 rgba(255,255,255,0.35); background-image: url('assets/sobre-instalacao.png'); background-size: cover; background-position: center top;">
-        <div style="position: absolute; inset: auto 12px 12px 12px; padding: 14px 18px; border-radius: 14px; background: rgba(12,14,18,0.5); backdrop-filter: blur(18px) saturate(1.5); -webkit-backdrop-filter: blur(18px) saturate(1.5); border: 1px solid rgba(255,255,255,0.14); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35);">
-          <span style="display: block; font-size: 14px; font-weight: 600; color: #F4F9FA;">Instalação especializada</span>
-          <span style="font-size: 12px; font-weight: 300; color: #9FB0B7;">Equipe própria certificada para trabalho em altura</span>
+      <div data-reveal style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease 0.05s, transform 0.8s ease 0.05s; position: relative; min-height: 380px; border-radius: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,0.16); box-shadow: 0 24px 70px rgba(13,45,52,0.121), inset 0 1px 0 rgba(255,255,255,0.35); background-image: url('assets/sobre-instalacao.png'); background-size: cover; background-position: center top; filter: brightness(1.07) saturate(1.02);">
+        <div style="position: absolute; inset: auto 12px 12px 12px; padding: 14px 18px; border-radius: 14px; background: rgba(255,255,255,0.85); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border: 1px solid rgba(9,42,48,0.10); box-shadow: 0 6px 20px rgba(13,45,52,0.12);">
+          <span style="display: block; font-size: 14px; font-weight: 600; color: #0B1417;">Instalação especializada</span>
+          <span style="font-size: 12px; font-weight: 300; color: #52656C;">Equipe própria certificada para trabalho em altura</span>
         </div>
       </div>
       <!-- números empilhados -->
@@ -513,9 +507,9 @@ class Component extends DCLogic {
       const drift = Math.max(-1.5, Math.min(1.5, active - i));
       out["agGrow" + i] = on ? grow : 1;
       out["agRot" + i] = on ? "rotateY(0deg)" : "rotateY(" + (i < active ? tilt : -tilt) + "deg)";
-      out["agFilter" + i] = on ? "grayscale(0)" : "grayscale(1)";
+      out["agFilter" + i] = on ? "grayscale(0) brightness(1.06)" : "grayscale(1) brightness(1.1)";
       out["agShift" + i] = on ? "translateX(0px)" : "translateX(" + (drift * 14).toFixed(1) + "px)";
-      out["agDim" + i] = on ? 0 : 0.35;
+      out["agDim" + i] = on ? 0 : 0.18;
       out["agLabel" + i] = on ? 1 : 0;
       out["agSlide" + i] = on ? "translateX(0px)" : "translateX(-14px)";
       out["agEnter" + i] = () => this.setState({ agActive: i });
